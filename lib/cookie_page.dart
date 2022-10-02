@@ -110,17 +110,14 @@ class CookiePage extends StatelessWidget {
                                       fontSize: 12.0))
                             ],
                             if (added) ...[
-                              Icon(Icons.remove_circle_outline,
+                             Icon(Icons.shopping_basket,
                                   color: Color(0xFFD17E50), size: 12.0),
-                              Text('3',
+                              Text('Add to cart',
                                   style: TextStyle(
                                       fontFamily: 'Varela',
                                       color: Color(0xFFD17E50),
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 12.0)),
-                              Icon(Icons.add_circle_outline,
-                                  color: Color(0xFFD17E50), size: 12.0),
-                            ]
+                                      fontSize: 12.0))
+                            ],
                           ]))
                 ]))));
   }

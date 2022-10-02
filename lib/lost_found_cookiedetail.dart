@@ -18,11 +18,12 @@ class LostFoundCookieDetail extends StatelessWidget {
             Navigator.of(context).pop();
           },
         ),
-        title: Text('Pickup',
+        title: Text('College Thrift',
             style: TextStyle(
                 fontFamily: 'Varela',
-                fontSize: 20.0,
-                color: Color(0xFF545D68))),
+                fontSize: 23.0,
+                fontWeight: FontWeight.bold,
+                color: Color(0xFFC88D67))),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.notifications_none, color: Color(0xFF545D68)),
@@ -40,7 +41,7 @@ class LostFoundCookieDetail extends StatelessWidget {
               'Lost and Found',
               style: TextStyle(
                       fontFamily: 'Varela',
-                      fontSize: 42.0,
+                      fontSize: 30.0,
                       fontWeight: FontWeight.bold,
                       color: Color(0xFFF17532))
             ),

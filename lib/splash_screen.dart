@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
 
   Future<bool> _mockCheckForSession() async {
-    await Future.delayed(Duration(milliseconds: 6000), () {});
+    await Future.delayed(Duration(milliseconds: 3000), () {});
 
     return true;
   }
@@ -58,7 +58,7 @@ class _SplashScreenState extends State<SplashScreen> {
         children: [
           Center(
             child: Image(
-              image: AssetImage('assets/cookievan.jpg'),
+              image: AssetImage('assets/logo.png'),
               width: 400,
               height: 350,
             ),
@@ -67,6 +67,4 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
     );
   }
-
-
 }

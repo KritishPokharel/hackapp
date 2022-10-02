@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fluttercookie/cookie_detail1.dart';
 
-import 'lost_found_cookiedetail.dart';
-//import 'package:fluttercookie/cookie_detail.dart';
-
-class LostFoundCookiePage extends StatelessWidget {
+class Furniture extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,14 +20,14 @@ class LostFoundCookiePage extends StatelessWidget {
                 mainAxisSpacing: 15.0,
                 childAspectRatio: 0.8,
                 children: <Widget>[
-                  _buildCard('Found Near UGL', 'Lab Coat', 'assets/coat.png',
-                      false, false, context),
-                  _buildCard('Found at Chemistry Class', 'IPhone 13', 'assets/iphone.png',
+                  _buildCard('Chair', '\$29.99', 'assets/chair.png', false,
+                      false, context),
+                  _buildCard('Study Table', '\$19.99', 'assets/studytable.jpg',
                       true, false, context),
-                  _buildCard('Found at Library', 'Smartwatch',
-                      'assets/watch.png', false, true, context),
-                  _buildCard('Found at Chapel', 'Notebook', 'assets/notebook.png',
-                      false, false, context)
+                  _buildCard('Book Shelf', '\$24.99', 'assets/bookshelf.png',
+                      false, true, context),
+                  _buildCard('Shoe Rack', '\$15.99', 'assets/shoe.jpg', false,
+                      false, context)
                 ],
               )),
           SizedBox(height: 15.0)
@@ -44,12 +42,11 @@ class LostFoundCookiePage extends StatelessWidget {
         padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
         child: InkWell(
             onTap: () {
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => LostFoundCookieDetail(
-                    assetPath: imgPath,
-                    cookieprice:price,
-                    cookiename: name
-                  )));
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => CookieDetail1(
+                      assetPath: imgPath,
+                      cookieprice: price,
+                      cookiename: name)));
             },
             child: Container(
                 decoration: BoxDecoration(
@@ -101,33 +98,23 @@ class LostFoundCookiePage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             if (!added) ...[
-                              Icon(Icons.info_outline,
+                              Icon(Icons.shopping_basket,
                                   color: Color(0xFFD17E50), size: 12.0),
-                              Text('Click for more details',
+                              Text('Add to cart',
                                   style: TextStyle(
                                       fontFamily: 'Varela',
-                                      color: Colors.black,
+                                      color: Color(0xFFD17E50),
                                       fontSize: 12.0))
                             ],
                             if (added) ...[
-                              // Icon(Icons.remove_circle_outline,
-                              //     color: Color(0xFFD17E50), size: 12.0),
-                              // Text('3',
-                              //     style: TextStyle(
-                              //         fontFamily: 'Varela',
-                              //         color: Color(0xFFD17E50),
-                              //         fontWeight: FontWeight.bold,
-                              //         fontSize: 12.0)),
-                              // Icon(Icons.add_circle_outline,
-                              //     color: Color(0xFFD17E50), size: 12.0),
-                              Icon(Icons.info_outline,
+                               Icon(Icons.shopping_basket,
                                   color: Color(0xFFD17E50), size: 12.0),
-                              Text('Click for more details',
+                              Text('Add to cart',
                                   style: TextStyle(
                                       fontFamily: 'Varela',
-                                      color: Colors.black,
+                                      color: Color(0xFFD17E50),
                                       fontSize: 12.0))
-                            ]
+                            ],
                           ]))
                 ]))));
   }

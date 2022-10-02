@@ -41,7 +41,7 @@ class _ProfilePageState extends State<ProfilePage> {
       ),
      floatingActionButton: FloatingActionButton(onPressed: () {},
       backgroundColor: Color(0xFFF17532),
-      child: Icon(Icons.fastfood),
+      child: Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomBar(),

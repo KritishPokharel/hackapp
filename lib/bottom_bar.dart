@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:fluttercookie/lost_found.dart';
+import 'package:fluttercookie/main_screen.dart';
+import 'package:fluttercookie/page/profile_page.dart';
+
 class BottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -26,8 +30,12 @@ class BottomBar extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  Icon(Icons.home, color: Color(0xFF676E79)),
-                  Icon(Icons.person_outline, color: Color(0xFF676E79))
+                  IconButton(icon: Icon(Icons.home), color: Color(0xFF676E79), onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => MyHomePage()),
+                    );
+                  },),
+                  IconButton(icon: Icon(Icons.search), color: Color(0xFF676E79)),
                 ],
               )
             ),
@@ -37,8 +45,16 @@ class BottomBar extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  Icon(Icons.search, color: Color(0xFF676E79)),
-                  Icon(Icons.shopping_basket, color: Color(0xFF676E79))
+                  IconButton(icon: Icon(Icons.shopping_basket), color: Color(0xFF676E79), onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => LostFound()),
+                    );
+                  },),
+                  IconButton(icon: Icon(Icons.person_outline), color: Color(0xFF676E79), onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => ProfilePage()),
+                    );
+                  },),
                 ],
               )
             ),

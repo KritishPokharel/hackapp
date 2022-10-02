@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:fluttercookie/bottom_bar.dart';
 
-class CookieDetail extends StatelessWidget {
+class CookieDetail1 extends StatelessWidget {
   final assetPath, cookieprice, cookiename;
 
-  CookieDetail({this.assetPath, this.cookieprice, this.cookiename});
+  CookieDetail1({this.assetPath, this.cookieprice, this.cookiename});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,12 +71,7 @@ class CookieDetail extends StatelessWidget {
           child: Container(
             width: MediaQuery.of(context).size.width - 50.0,
             child: Text(
-                '''I bought this book in my freshman year of 2021. It is like new with no damage. 
-                Organic Chemistry (Paula Yurkanis Bruice)
-                
-                Product details 
-                Publisher  :  Pearson; 8th edition (July 28, 2016)
-                Language  :  English''',
+                'My uncle gifted me this chair 6 months ago, and now I am moving to a new place. So, contact ASAP for a good deal.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontFamily: 'Varela',
@@ -105,7 +100,7 @@ class CookieDetail extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: Color(0xFFF17532),
-        child: Icon(Icons.fastfood),
+        child: Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomBar(),

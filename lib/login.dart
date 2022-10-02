@@ -40,7 +40,7 @@ class LoginPage extends StatelessWidget {
       children: [
         TextField(
           decoration: InputDecoration(
-              hintText: "Username",
+              hintText: "E-mail (.edu)",
               border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(18),
                   borderSide: BorderSide.none),

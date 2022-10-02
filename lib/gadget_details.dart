@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:fluttercookie/bottom_bar.dart';
 
-class CookieDetail extends StatelessWidget {
+class Gadget1 extends StatelessWidget {
   final assetPath, cookieprice, cookiename;
 
-  CookieDetail({this.assetPath, this.cookieprice, this.cookiename});
+  Gadget1({this.assetPath, this.cookieprice, this.cookiename});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,12 +71,11 @@ class CookieDetail extends StatelessWidget {
           child: Container(
             width: MediaQuery.of(context).size.width - 50.0,
             child: Text(
-                '''I bought this book in my freshman year of 2021. It is like new with no damage. 
-                Organic Chemistry (Paula Yurkanis Bruice)
-                
-                Product details 
-                Publisher  :  Pearson; 8th edition (July 28, 2016)
-                Language  :  English''',
+                '''I bought this eight months ago for a gaming purpose. I am planning to build a gaming PC setup , so I want to sell this soon. Reach out soon for a great deal.
+                Product: Lenovo Ideapad 5 pro
+                RAM : 16GB
+                Storage : 512GB
+                ''',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontFamily: 'Varela',

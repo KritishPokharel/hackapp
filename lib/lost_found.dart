@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttercookie/bottom_bar.dart';
 
 import 'lost_foundcookiepage.dart';
+import 'main_screen.dart';
 //import 'package:fluttercookie/cookie_page.dart';
 
 class LostFound extends StatefulWidget {
@@ -28,13 +29,18 @@ class _MyHomePageState extends State<LostFound>
         centerTitle: true,
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Color(0xFF545D68)),
-          onPressed: () {},
+          onPressed:() {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => MyHomePage()),
+                    );
+                  },
         ),
-        title: Text('Pickup',
+        title: Text('College Thrift',
             style: TextStyle(
                 fontFamily: 'Varela',
-                fontSize: 20.0,
-                color: Color(0xFF545D68))),
+                fontSize: 23.0,
+                fontWeight: FontWeight.bold,
+                color: Color(0xFFC88D67))),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.notifications_none, color: Color(0xFF545D68)),
@@ -49,7 +55,7 @@ class _MyHomePageState extends State<LostFound>
           Text('Lost and Found',
               style: TextStyle(
                   fontFamily: 'Varela',
-                  fontSize: 42.0,
+                  fontSize: 30.0,
                   fontWeight: FontWeight.bold)),
           SizedBox(height: 15.0),
           // TabBar(
@@ -98,7 +104,7 @@ class _MyHomePageState extends State<LostFound>
       ),
       floatingActionButton: FloatingActionButton(onPressed: () {},
       backgroundColor: Color(0xFFF17532),
-      child: Icon(Icons.fastfood),
+      child: Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomBar(),
